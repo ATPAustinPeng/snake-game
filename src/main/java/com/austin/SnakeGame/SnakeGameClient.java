@@ -6,7 +6,6 @@ import javax.swing.OverlayLayout;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.security.Key;
 
 // TODO : why does Snake.java uses unchecked or unsafe operations
 // TODO : layer 3 JPanels (start screen), death screen, game screen (display score) + background screen
@@ -16,7 +15,7 @@ import java.security.Key;
 /**
  * The client class that actually runs the snake game.
  */
-public class SnakeGame extends JFrame {
+public class SnakeGameClient extends JFrame {
 
     /**
      * The specified window width.
@@ -45,7 +44,7 @@ public class SnakeGame extends JFrame {
 
     public static void main(String[] args) throws InterruptedException {
         // Creates the JFrame for the snake game.
-        SnakeGame gameFrame = new SnakeGame();
+        SnakeGameClient gameFrame = new SnakeGameClient();
 
         // Creates a JPanel for overlaying the game board with the background.
         JPanel gameAndBackground = new JPanel();
@@ -85,7 +84,7 @@ public class SnakeGame extends JFrame {
      * Press the 'Q' key to close the game.
      * Press the 'R' key to restart.
      */
-    public SnakeGame() {
+    public SnakeGameClient() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
